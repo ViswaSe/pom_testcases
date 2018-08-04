@@ -1,0 +1,154 @@
+1.package classwork;
+
+import java.util.*;
+public class prime
+{
+	public static void main(String[] args)
+	{
+		int n,p;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the value of n:");
+		n=s.nextInt();
+		for(int i=2;i<n;i++)
+		{
+			p=0;
+			for(int j=2;j<i;j++)
+			{
+				if(i%j==0)
+				p=1;
+			}
+			if(p==0)
+				System.out.println(i);
+		}
+	}
+}
+
+
+2.package classwork;
+import java.util.Scanner;
+public class SumOfNumbers{
+   public static void main(String args[]){
+      Scanner scanner = new Scanner(System.in);
+      int[] array = new int[10];
+      int sum = 0;
+      System.out.println("Enter the elements:");
+      for (int i=0; i<10; i++)
+      {
+    	  array[i] = scanner.nextInt();
+      }
+      for( int num : array) {
+          sum = sum+num;
+      }
+      System.out.println("Sum of array elements is:"+sum);
+   }
+}
+
+3.Arithmetic Operations
+
+package dailyprogram;
+
+import java.util.Scanner;
+
+public class Code_03 {
+
+	public static void main(String[] args) {
+		/*1.Write a Java Program to get 3 user inputs 
+		Two Numbers 
+		One String which can be either of the below “Add”/”Subtract”/“Multiply”/”Divide”
+		2. Perform the equivalent arithmetic operation.
+		3. Print the result in the console.*/
+
+		Double var1,var2;
+		Scanner getinput=new Scanner(System.in);
+		//get input for var1
+		System.out.println("Enter the First number:");
+		var1=getinput.nextDouble();
+		//get input for var2
+		System.out.println("Enter the Second number:");
+		var2=getinput.nextDouble();
+		//get input for operation
+		System.out.println("Enter the Operation:Add/Subtract/Multiply/Divide:");
+		String oper1=getinput.next();
+		switch(oper1)
+		{
+		case "Add":
+			System.out.println("Addition of " + var1 + " and " + var2 + " is " + (var1 + var2));
+			break;
+		case "Subtract":
+			System.out.println("Subtraction of " + var1 + " and " + var2 + " is " + (var1 - var2));
+			break;
+		case "Multiply":
+			System.out.println("Multiplication of " + var1 + " and " + var2 + " is " + (var1 * var2));
+			break;
+		case "Divide":
+			if (var2 != 0)
+				System.out.println("Division of " + var1 + " and " + var2 + " is " + (var1 / var2));
+			else
+				System.out.println("Division cannot be performed for the entered second number (Zero)");
+			break;
+		default:
+			System.out.println("Enter a Valid Operation");
+		}
+		getinput.close();
+	}
+
+}
+
+4.String Palindrome
+
+package dailyprogram;
+
+import java.util.Scanner;
+
+public class Code_04 {
+
+	public static void main(String[] args) {
+		//String is Palindrome or Not
+		System.out.println("Enter the Text to determine palindrome or not");
+		Scanner getinput=new Scanner(System.in);
+		String orginal,reverse="";
+		orginal=getinput.next();
+		int n=orginal.length();
+		for(int i=n-1;i>=0;i--)
+		{
+			reverse=reverse+orginal.charAt(i);
+		}
+		if (orginal.equalsIgnoreCase(reverse)) {
+			System.out.println("Entered string is a palindrome.");
+		}
+		else {
+			System.out.println("Entered string is not a palindrome.");
+		}
+		getinput.close();
+	}
+
+}
+
+5. package dailyprogram;
+
+import java.util.Scanner;
+
+public class Code_04_1 {
+
+	public static void main(String[] args) {
+		int startNumb,endNumb;
+		Scanner getinput=new Scanner(System.in);
+		System.out.println("Enter the starting number");
+		startNumb=getinput.nextInt();
+		System.out.println("Enter the ending number");
+		endNumb=getinput.nextInt();
+		for (int i = startNumb; i <= endNumb; i++) {
+            if (i % 15 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(String.valueOf(i));
+            }
+        }
+		getinput.close();
+	}
+
+}

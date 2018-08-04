@@ -1,0 +1,177 @@
+1. Write a java program to print the Armstrong number from 100 to 1000.
+
+package dailyprogram;
+
+public class Code_05 {
+
+	public static void main(String[] args) {
+		/*Write a Java Program to print the Armstrong number from 100 to 1000.
+		Note : Armstrong number is a number that is equal to the sum of cubes of its digits. 
+		For example 153 is an Armstrong number since 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153.*/
+		for(int i=100;i<1000;i++)
+		{
+			int n=i,sum=0;
+			int numLen = String.valueOf(i).length();
+			while(n>0)
+			{
+				int r=n%10;
+				sum=sum + (int)(Math.pow(r, numLen));
+				n=n/10;
+			}
+			if (i==sum)
+			{
+				System.out.println(i+" is Amstrong number");
+			}
+		}
+	}
+
+}
+
+2. Find the repeated numbers in an Array of Int.
+
+package dailyprogram;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class Code_06 {
+
+	public static void main(String[] args) {
+		/*Find repeated numbers in an Array List of numbers.
+		Declare an integer array like 
+		int[] a = {13,15,67,88,65,13,99,67,65,87,13}. 
+		The result should be – Duplicated numbers are 13 67 65*/
+		int a[]={13,15,67,88,65,13,67,99,65,87,13,99,199,99,99,199};
+		int n=a.length;
+		//to print the duplicated numbers only once, we need to use Array.sort, Set concept or String's inbuilt functions
+		//Option # 1
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(a[j]==a[i]) {
+					System.out.print(a[i]+" ");
+					break;
+				}
+			}
+		}
+		System.out.println();
+		Set<Integer> dupNumbers = new LinkedHashSet<Integer>();
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(a[j]==a[i]) {
+					dupNumbers.add(a[i]);
+				}
+			}
+		}
+		System.out.println(dupNumbers);
+		//Using Arrays sort and to print duplicated values only once
+		//Option # 2
+		Arrays.sort(a);
+		String repeatedNum = "";
+		for (int i = 0; i < a.length -1 ; i++) {
+			if(a[i] == a[i+1]){
+				if (!repeatedNum.equals(a[i]+" ")) {
+					repeatedNum = a[i] +" ";
+					System.out.print(repeatedNum);
+				}
+			}
+		}
+		System.out.println();
+		//to print first element in the sorted array if it is repeated.
+		if (a[0]==a[1]) {
+			System.out.print(a[0]+" ");
+		}
+		for (int i = 1; i < a.length -1 ; i++) {
+			if(a[i] == a[i+1] && a[i]!=a[i-1]){
+				System.out.print(a[i]+" ");
+			}
+		}
+		System.out.println();
+	}
+
+}
+
+
+3. Write a java program to find the given year is a leap year or not.
+
+package dailyprogram;
+
+import java.util.Scanner;
+
+public class Code_07 {
+
+	public static void main(String[] args) {
+		// Leap Year or Not
+		System.out.println("Enter the Year to check Leap year or not:");
+		Scanner var1=new Scanner(System.in);
+		int n=var1.nextInt();
+		var1.close();
+		if(((n%4==0)&&(n%100!=0)) || n%400 == 0){
+			System.out.println("Given year is leap year");
+		}else{
+			System.out.println("Given year is not leap year");
+		}
+	}
+
+}
+
+
+4. Write a Java program to print Foyd triange by getting the number of row.
+
+package dailyprogram;
+
+import java.util.Scanner;
+
+public class Code_09 {
+
+	public static void main(String[] args) {
+		/*Write a Java program to print Floyd triangle by getting the number of rows.
+		Ex:- Enter the No. of rows: 4
+			1
+			2 3
+			4 5 6
+			7 8 9 10*/
+		System.out.println("Enter the number for folyd triangle:");
+		Scanner var1=new Scanner(System.in);
+		int n=var1.nextInt(),k=1;
+		var1.close();
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print(k+"  ");
+				k++;
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+
+5.Write a java program to find the second maximum number in an array of integers.
+
+package dailyprogram;
+
+public class Code_08 {
+
+	public static void main(String[] args) {
+		/*Write a Java program to find the second maximum number in an integer array.
+		int[] intArray = {20, 340, 21, 879, 92, 21,474,83647,-200};
+		The second largest number is 879.
+		Your code should work even when all the integers of the array is negative numbers.*/
+		int a[]={13,67,88,65,13,95,67,65,87,95,99,99};
+		int n=a.length;
+		int big = Integer.MIN_VALUE;
+		int secondbig = Integer.MIN_VALUE;
+		for(int i=0;i<n;i++){
+			if(big<a[i]){
+				secondbig = big;
+				big = a[i];
+			} else if (a[i] != big && secondbig < a[i]){
+				secondbig = a[i];
+			}
+		}
+		System.out.println(big+" is the first largest number.");
+		System.out.println(secondbig+" is the second largest number.");
+	}
+}

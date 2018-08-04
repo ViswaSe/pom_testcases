@@ -1,0 +1,1 @@
+java -jar selenium-server-standalone-3.12.0.jar -role wd -port 5588 -hub http://localhost:4444/grid/register -browser "browserName=MicrosoftEdge,platform=WINDOWS,maxInstances=3" -maxSession 2

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestLeaf]">
+  <parameter name="uName" value="DemoSalesManager"/>
+  <parameter name="pwd" value="crmsfa"/>
+  <parameter name="url" value="http://leaftaps.com/opentaps"/>
+  <test thread-count="5" name="Leads(failed)" parallel="classes">
+    <classes>
+      <class name="learnparameters.CreateLeadFramework">
+        <methods>
+          <include name="login"/>
+          <include name="createLead"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- learnparameters.CreateLeadFramework -->
+    </classes>
+  </test> <!-- Leads(failed) -->
+</suite> <!-- Failed suite [TestLeaf] -->

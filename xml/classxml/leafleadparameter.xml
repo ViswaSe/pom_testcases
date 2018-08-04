@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestLeaf">
+  <parameter name="url" value="http://leaftaps.com/opentaps"></parameter>
+  <parameter name="uName" value="DemoSalesManager"></parameter>
+  <parameter name="pwd" value="crmsfa"></parameter>
+  
+  <test name="Leads">
+    <classes>
+      <class name="learnparameters.CreateLeadFramework"/>
+<!--       <class name="learnparameters.DeleteLeadFramework"/>
+      <class name="learnparameters.DuplicateLeadFramework"/>
+      <class name="learnparameters.MergeLeadFramework"/>
+      <class name="learnparameters.EditLeadFramework"/> -->
+    </classes>
+  </test> <!-- Leads -->
+</suite> <!-- TestLeaf -->

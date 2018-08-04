@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test1">
+    <classes>
+      <class name="testNg.TestNG1"/>
+    </classes>
+  </test> <!-- Test1 -->
+
+  <test name="Test2">
+    <classes>
+      <class name="testNg.TestNG2"/>
+      <class name="testNg.TestNG3"/>
+    </classes>
+  </test> <!-- Test2 -->
+
+  <test name="Test3">
+    <classes>
+      <class name="testNg.TestNG4"/>
+      <class name="testNg.TestNG5"/>
+    </classes>
+  </test> <!-- Test3 -->
+
+</suite> <!-- Suite -->

@@ -1,0 +1,1 @@
+java -jar selenium-server-standalone-3.13.0.jar -role wd -hub http://172.20.10.2:4444/grid/register -browser "browserName=chrome,platform=WINDOWS,maxInstances=3" -maxSession 2

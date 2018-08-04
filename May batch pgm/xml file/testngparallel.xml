@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Leaftapshomework" parallel="classes">
+  <test thread-count="2" name="Modules" parallel="classes">
+    <classes>
+      <class name="week4.day1.CreateLeadFrameWork"/>
+      <class name="week4.day1.DeleteLeadFrameWork"/>
+      <class name="week4.day1.MergeLeadFrameWork"/>
+      <class name="week4.day1.DuplicateLeadFramework"/>
+    </classes>
+  </test> <!-- Modules -->
+</suite> <!-- Leaftapshomework -->

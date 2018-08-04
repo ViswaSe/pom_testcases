@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LeafTaps]">
+  <test thread-count="5" name="Leads(failed)" parallel="classes">
+    <classes>
+      <class name="leaflead.DeleteLeadFrameWork">
+        <methods>
+          <include name="close"/>
+          <include name="callDelete"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- leaflead.DeleteLeadFrameWork -->
+    </classes>
+  </test> <!-- Leads(failed) -->
+</suite> <!-- Failed suite [LeafTaps] -->

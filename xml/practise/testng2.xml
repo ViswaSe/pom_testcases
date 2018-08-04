@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestLeaf">
+  <test name="Test">
+    <classes>
+      <class name="leaflead.DuplicateLeadFramework"/>
+      <class name="leaflead.CreateLeadFrameWork"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="Test1" parallel="classes">
+    <classes>
+      <class name="leaflead.DeleteLeadFrameWork"/>
+      <class name="leaflead.MergeLead"/>
+    </classes>
+  </test> <!-- Test1 -->
+  
+</suite> <!-- TestLeaf -->

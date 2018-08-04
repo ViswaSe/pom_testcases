@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Leaftaps">
+  <test thread-count="5" name="Test">
+  <groups>
+  	<run>
+<!--   	
+  	<include name="common"></include>
+  	<include name="smoke"></include>
+  	<include name="sanity"></include>
+	<include name="regression"></include>
+ -->	
+
+ 		<exclude name="functional"></exclude>
+  		</run>
+  		</groups>
+    <classes>
+      <class name="week4.day2.learngroups.DuplicateLeadFramework"/>
+      <class name="week4.day2.learngroups.EditLead"/>
+      <class name="week4.day2.learngroups.CreateLeadFrameWork"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Leaftaps -->

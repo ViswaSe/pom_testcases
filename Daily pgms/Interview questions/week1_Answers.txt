@@ -1,0 +1,18 @@
+1. Selenium is the portable testing framework which helps to test the web-based applications. It is not a single tool but it is a suite of tools 
+which helps to automate the web based applications. It is a open source tool which is available in the market and user can develop the 
+source code to interact with the webelement on the given web applications.
+selenium supports many programming languages: C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. 
+currently there are 2 products in the selenium are in usage : 1. selenium webdriver, 2. selenium grid
+
+3. 2 Types of locator: attribute based, structure based locator
+attribute based: if its contained from attribute
+structure based: based on the structure	
+
+7. 
+
+findElementById() - ChromeDriver - RemoteWebDriver (driver)
+findElement(By.id) - WebDriver - driver as an reference for chrome driver class, so if we are using any interface references we can only access the methods inside the 
+webdriver interface but not the chromedriver class
+
+refer pgm1 fr more details.
+
